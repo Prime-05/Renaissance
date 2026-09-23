@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Renaissance — IETE KJSIT</title>
+<meta name="description" content="Renaissance — IETE KJSIT">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="grain"></div>
+
+<header>
+  <a class="brand" href="#top">IETE KJSIT</a>
+  <nav>
+    <a class="nav-link" href="#events">Events</a>
+    <a class="nav-link" href="#schedule">Schedule</a>
+    <a class="nav-link" href="#sponsors">Partners</a>
+    <a class="nav-link" href="#register">Contact</a>
+    <a class="cta" href="#register">Register ↗</a>
+  </nav>
+</header>
+
+<section class="hero" id="top">
+  <canvas id="heroCanvas"></canvas>
+  <div class="hero-ui">
+    <div class="hero-top">IETE KJSIT PRESENTS</div>
+    <div class="hero-side left">Technology<br>People<br>Possibility</div>
+    <div class="hero-side right">Past<br>Present<br>Beyond</div>
+    <div class="hero-copy">
+      <h1 id="heroTitle" class="sr-only">Renaissance</h1>
+      <p>Ideas reborn. Boundaries redrawn.</p>
+      <div class="hero-buttons">
+        <a class="btn" href="#events">Explore ↓</a>
+        <a class="btn alt" href="#register">Register ↗</a>
+      </div>
+    </div>
+    <div class="hero-bottom-left">[ 2026 ]</div>
+    <div class="hero-bottom-right">Engineering · Creativity · Impact</div>
+  </div>
+</section>
+
+<section class="section events" id="events">
+  <div class="section-head">
+    <div><div class="kicker">01 / Events</div><h2 class="title">Different arenas.<br>One spirit.</h2></div>
+    <p class="intro">A continuous arc of Renaissance events. The center card rises into focus while the others travel through the curve.</p>
+  </div>
+  <div class="event-filters" role="tablist" aria-label="Event categories">
+    <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+    <button class="filter-btn" data-filter="tech" role="tab" aria-selected="false">Tech</button>
+    <button class="filter-btn" data-filter="nontech" role="tab" aria-selected="false">Non-Tech</button>
+  </div>
+  <div class="events-stage" id="eventsStage">
+    <div class="arc-line"></div>
+    <div id="eventCards"></div>
+  </div>
+  <div class="events-help">Click a card to explore · drag or use the arrows</div>
+  <div class="arc-controls">
+    <button class="arc-btn" id="prev">←</button><button class="arc-btn" id="next">→</button>
+  </div>
+</section>
+
+<section class="section schedule" id="schedule">
+  <div class="section-head">
+    <div><div class="kicker">02 / Schedule</div><h2 class="title">The day,<br>in motion.</h2></div>
+    <p class="intro">Three days, one Renaissance — the programme structure currently presented on the Renaissance 2026 reference site.</p>
+  </div>
+  <div class="timeline" id="timeline"></div>
+</section>
+
+<section class="section sponsors" id="sponsors">
+  <div class="section-head">
+    <div><div class="kicker">03 / Partners</div><h2 class="title">Built<br>together.</h2></div>
+    <p class="intro">Partners and sponsors will be presented in the same moving visual rhythm as the rest of the festival.</p>
+  </div>
+  <div class="sponsor-window"><div class="sponsor-track" id="sponsorTrack"></div></div>
+</section>
+
+<section class="section" id="register" style="min-height:58vh;display:grid;place-items:center;text-align:center;background:radial-gradient(circle at 50% 50%,rgba(36,76,255,.08),transparent 38%)">
+  <div>
+    <div class="kicker">04 / The next chapter</div>
+    <h2 class="title">Enter<br>Renaissance.</h2>
+    <a class="btn" href="#" style="margin-top:34px">Register now ↗</a>
+  </div>
+</section>
+
+<footer><span>IETE KJSIT · RENAISSANCE 2026</span><span>Mumbai · Ideas · People · Technology</span></footer>
+
+<div class="event-panel" id="eventPanel" aria-hidden="true">
+  <div class="panel">
+    <button class="panel-close" id="closePanel" aria-label="Close">×</button>
+    <div class="panel-visual"></div>
+    <div class="panel-info">
+      <div class="kicker" id="panelType"></div>
+      <h3 id="panelName"></h3>
+      <div class="panel-tagline" id="panelTagline"></div>
+      <p id="panelDesc"></p>
+      <div class="event-details-grid">
+        <div class="detail-item"><div class="detail-label">Members</div><div class="detail-value" id="panelMembers"></div></div>
+        <div class="detail-item"><div class="detail-label">Place</div><div class="detail-value" id="panelPlace"></div></div>
+        <div class="detail-item"><div class="detail-label">Time</div><div class="detail-value" id="panelTime"></div></div>
+        <div class="detail-item"><div class="detail-label">Registration Fee</div><div class="detail-value" id="panelFee"></div></div>
+      </div>
+      <div class="panel-actions">
+        <a class="btn" href="#register" id="panelCTA">Register →</a>
+      </div>
+      <div class="event-register-note">Registration details will be updated when finalized.</div>
+    </div>
+  </div>
+</div>
+  <script src="js/main.js"></script>
+</body>
+</html>
